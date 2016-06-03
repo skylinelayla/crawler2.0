@@ -17,6 +17,16 @@ html=etree.HTML(text)
 result=html.xpath('//li/a[@href="link.html"]')
 print(result)
 
+html2=etree.parse('test.html')
+result2=html2.xpath('//li//span')
+print(result2)
+
+result3=html2.xpath('//li/a//@class')
+print(result3)
+
+result4=html2.xpath('//li[last()]/a/@href')
+print(result4)
+
 
 
 
