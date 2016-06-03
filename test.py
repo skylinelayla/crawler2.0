@@ -14,9 +14,8 @@ text='''
         <li class="item-0"><a href="link5.html"> fifth item</a> </li>
 '''
 html=etree.HTML(text)
-result=etree.tostring(html)
+result=html.xpath('//li/a[@href="link.html"]')
 print(result)
-
 
 
 
